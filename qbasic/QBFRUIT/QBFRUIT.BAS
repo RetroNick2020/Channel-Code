@@ -5,7 +5,7 @@ OPTION BASE 1
 SCREEN 13
 
 DIM melon(130)
-dim cherry(130)
+DIM cherry(130)
 
 FOR i = 1 TO 130
   READ melon(i)
@@ -19,9 +19,10 @@ NEXT
 CALL FruitPalette
 
 PUT (10, 10), melon, PSET
-PUT (10, 10), cherry, PSET
+PUT (30, 10), cherry, PSET
 
-CALL transput(40, 10, melon(), 255)
+CALL transput(60, 10, melon(), 255)
+CALL transput(80, 10, cherry(), 255)
 
 
 cher:
