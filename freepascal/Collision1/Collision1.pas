@@ -43,13 +43,22 @@ end;
 procedure MovePlayer(playerid,x,y : integer);
 var
  i : integer;
+ FindFirst : boolean;
+ dx,dy : integer;
 begin
+ FindFirst:=false;
  for i:=1 to MaxShapes do
  begin
    if ShapeList[i].playerid = playerid then
    begin
-     ShapeList[i].x:=x;
-     ShapeList[i].y:=y;
+     If FindFirst = false then
+     begin
+       dx:=x-ShapeList[i].x;
+       dy:=y-ShapeList[i].y;
+       FindFirst:=true;
+     end;
+     ShapeList[i].x:=ShapeList[i].x+dx;
+     ShapeList[i].y:=ShapeList[i].y+dy;
    end;
  end;
 end;
@@ -224,10 +233,14 @@ begin
  InitShapes;
  Initcollisions;
 
- SetShape(1,1,true,true,10,10,16,16,0,0,@DrawShape);
- SetShape(2,2,true,true,30,30,16,16,0,0,@DrawShape2);
- AddCollission(1,2,@Collission);
+ SetShape(1,1,true,true,14,2,10,6,0,0,@DrawShape);
+ SetShape(2,1,true,true,10,10,16,16,0,0,@DrawShape);
 
+ SetShape(3,2,true,true,30,30,16,16,0,0,@DrawShape2);
+ AddCollission(2,3,@Collission);
+ AddCollission(1,3,@Collission);
+
+ MovePlayer(1,100,100);
  While Not Finished do
  begin
    ClearViewPort;
