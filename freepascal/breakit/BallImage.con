@@ -1,0 +1,6 @@
+(* Turbo Pascal, Width= 5 Height= 5 Colors= 256 *)
+
+BallImage : Array[1..31] of Byte = (
+          $04,$00,$04,$00,$00,$0F,$0F,$0F,$00,$0F,$0C,$0C,
+          $0F,$0F,$0F,$0C,$0F,$0C,$0F,$0F,$0F,$0C,$0C,$0F,
+          $00,$0F,$0F,$0F,$00,$00,$00);
