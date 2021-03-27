@@ -10,6 +10,11 @@
     defint a-z
     option base 1
 
+    X=257
+    c$=MKI$(X)
+    PRINT ASC(LEFT$(c$,1))
+    PRINT ASC(RIGHT$(c$,1))
+    '   input a
     
     dim image(1000)
 
@@ -24,7 +29,8 @@
     Call GetImageSize(150,5,165,20,5,size)
     Call MakeBobImage(image(),BoxImage$,size)
 
-    Call ReadPutImageFile("ball.xgf",image(),47)  
+    Call ReadPutImageFile("ball.xgf",image(),47)
+    'Call SavePutImageFile("ball2.xgf",image(),47)
     put (10,10),image,pset
     Call MakeBobImage(image(),BobImage$,47)
     
@@ -136,6 +142,16 @@
     for i=1 to size
         get #1
         ImageBuf(i)=CVI(c$)
+    next i
+    close #1
+    END SUB
+
+    SUB SavePutImageFile(filename$,ImageBuf(),size) static
+    open "R",#1,filename$,2
+    field #1, 2 as c$
+    for i=1 to size
+        LSET c$ = MKI$(ImageBuf(i))
+        put #1
     next i
     close #1
     END SUB
