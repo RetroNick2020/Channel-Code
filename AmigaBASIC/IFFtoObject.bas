@@ -114,6 +114,8 @@ getchunk:
       PRINT 
       a$=INPUT$(4,1)
       bytes%=(bwidth%-1)\8+1
+      'RetroNick added this line to fix issues with loading images 8 pixels wide or less
+      if bwidth% < 9 then  bytes%=(bwidth%+15)\8   
       bmap%=bytes%*bheight%
       obj$=STRING$(bytes%*bheight%*planes%,0)
       FOR i%=0 TO bheight%-1
