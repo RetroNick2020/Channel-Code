@@ -44,9 +44,18 @@
     object.on 2
 
 
-    input a$
+    a$=""
+    x=150
+    While a$<>"q"
+      a$=inkey$
+      if a$="a" then x=x-4
+      elseif a$="s" then x=x+4
+      
+      object.x 2,x
 
+    Wend
 
+    End
   
 
 SUB MakeSpriteImage(ImageBuf(),ObjectImage$,size) static
