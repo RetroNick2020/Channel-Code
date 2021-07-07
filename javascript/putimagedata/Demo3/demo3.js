@@ -411,10 +411,8 @@ var rcartransImage  = new Uint8ClampedArray([
     190,202,202,0,190,202,202,0,190,202,
     202,0,190,202,202,0]);
 
-
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-
 
 var hiddencanvas = document.getElementById('hiddencanvas');
 hctx = hiddencanvas.getContext('2d');
@@ -438,21 +436,5 @@ ctx.fillRect(20, 0, 20, 80);
 //draw images over bars using putImageData() and drawImage()
 ctx.putImageData(rcarImageData,5,5);
 ctx.drawImage(hImage,5,45);
+//ctx.drawImage(hiddencanvas,5,45);
 
-
-
-//image.onload = function() {
-//    alert("Image object can be used");
-//  ctx2.drawImage(this,30,30);
-  
-//};
-
-window.onload = function()
-{
-// alert("loaded");
-   //ctx2.putImageData(mydata,0,0);
-//   ctx2.drawImage(image,10,10);
-//   ctx2.drawImage(image2,50,50);
-//ctx.drawImage(himage,0,0);
-//ctx.putImageData(rcarImageData,0,33);
-};

@@ -418,4 +418,4 @@ var imageData = new ImageData(rcartransImage,32);
 ctx.putImageData(imageData, 0, 0);
 
 //change canvas back ground color to blue by removing comment from line below
-//canvas.style.backgroundColor='blue';
+canvas.style.backgroundColor='green';
