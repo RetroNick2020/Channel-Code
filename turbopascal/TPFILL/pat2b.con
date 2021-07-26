@@ -1,0 +1,5 @@
+(* Turbo Pascal, Width= 8 Height= 8 Colors= 2 *)
+
+pat2b : Array[1..14] of Byte = (
+          $07,$00,$07,$00,$00,$7E,$42,$5A,$5A,$42,$7E,$00,
+          $00,$00);
