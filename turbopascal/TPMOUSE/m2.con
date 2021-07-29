@@ -1,0 +1,9 @@
+(* Turbo Pascal, Width= 16 Height= 16 Colors= 4 *)
+
+m2 : Array[1..70] of Byte = (
+          $0F,$00,$0F,$00,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,
+          $AF,$FF,$FF,$AA,$AE,$AA,$AB,$2A,$AE,$55,$5B,$2A,
+          $AE,$55,$5B,$2A,$AE,$55,$5B,$2A,$AE,$55,$5B,$2A,
+          $AE,$55,$5B,$2A,$AE,$55,$5B,$2A,$AE,$AA,$AB,$2A,
+          $AF,$FF,$FF,$2A,$A8,$00,$00,$2A,$AA,$AA,$AA,$AA,
+          $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA,$00,$00);
