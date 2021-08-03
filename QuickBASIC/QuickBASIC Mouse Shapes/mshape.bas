@@ -24,7 +24,7 @@ DECLARE SUB MouseShow ()
 DECLARE SUB MouseButPos (ButStat%, CurHor%, CurVert%)
 
 SCREEN 1
-LINE (100, 0)-(150, 50), 2, BF
+LINE (0, 0)-(150, 50), 2, BF
 LINE (100, 50)-(150, 100), 1, BF
 LINE (100, 100)-(150, 150), 3, BF
 LOCATE 20, 1
@@ -39,10 +39,10 @@ FOR i = 0 TO 33
   READ Image%(i)
 NEXT i
 
-CALL PrintN
-LOCATE 20, 1
-GET (0, 0)-(15, 15), TImage%
-CALL ImageToMouseShape(TImage%(), MyMouse%())
+'CALL PrintN
+'LOCATE 20, 1
+'GET (0, 0)-(15, 15), TImage%
+CALL ImageToMouseShape(Image%(), MyMouse%())
 
 ' this is the part that makes the shape
 m1 = 9
