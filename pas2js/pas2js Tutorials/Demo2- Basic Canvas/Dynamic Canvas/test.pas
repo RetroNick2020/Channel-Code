@@ -1,4 +1,5 @@
 // Dynamic Canvas Example
+// see video for additional info https://youtu.be/kuU1TTrPTzM
 Program test;
   uses browserconsole,Web;
 
@@ -16,12 +17,12 @@ begin
   canvas.height:=400;
   canvas.id:='canvas_2';
   
-  //divElement:=TJSHTMLElement(document.getElementById('gameboard'));
+  divElement:=TJSHTMLElement(document.getElementById('gameboard'));
   //insert canvas element inside gameboard div
-  //divElement.appendChild(canvas);
+  divElement.appendChild(canvas);
   // or insert inside body
   // https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
-  document.body.appendChild(canvas);
+  //document.body.appendChild(canvas);
   
   ctx:=TJSCanvasRenderingContext2D(canvas.getContext('2d'));
 
