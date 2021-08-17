@@ -466,4 +466,3 @@ function createCanvasWithImage(pImage,width,height) {
     xctx.putImageData(tempImageData,0,0);
     return xcanvas;
 }
-
