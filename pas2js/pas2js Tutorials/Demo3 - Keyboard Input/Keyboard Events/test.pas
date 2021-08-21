@@ -1,5 +1,5 @@
 // Keyboard Event Example
-// see video for additional info https://youtu.be/
+// see video for additional info https://youtu.be/rw5y-r0RFq8
 
 Program test;
   uses browserconsole,Web;
