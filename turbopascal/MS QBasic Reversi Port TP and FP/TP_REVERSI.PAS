@@ -1,3 +1,6 @@
+(* Ported to Turbo Pascal By RetroNick on August 29 - 2021 *)
+(* See youtube video https://youtu.be/BVuZLp7hr-Q          *)
+
 Program Reversi;
   uses graph,crt;
 
