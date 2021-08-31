@@ -1,3 +1,4 @@
+(* Microsoft's QBasic Reversi for DOS                      *)
 (* Ported to Turbo Pascal By RetroNick on August 29 - 2021 *)
 (* See youtube video https://youtu.be/BVuZLp7hr-Q          *)
 
@@ -581,7 +582,6 @@ end;
 var
  jstep,row,col,i,j : integer;
 begin
-  (*//SELECT CASE smode*)
   if smode = 9 then
   begin
     HUMAN := 4;
@@ -618,10 +618,6 @@ begin
     begin
       GG[row, col].player := GBoard;
       GG[row, col].nTake := 0;
-      (*GG[row, col].cx := 270 + integer((col - 0.5) * 40);
-      GG[row, col].cy := 70 + integer((row - 0.5) * 40); *)
-
-
       GG[row, col].cx := 270 + calc_rc(col);
       GG[row, col].cy := 70 + calc_rc(row);
       GW[row, col] := 2;
@@ -652,17 +648,12 @@ END;
 
 Procedure UserMove;
 var
-a : char;
+  a : char;
 move : integer;
 begin
 
   DrawCursor(GS.curRow, GS.curCol);
   Repeat
-    (*
-    Repeat
-      a := inkeyString;
-    UNTIL a <> #0;
-    *)
     move := GetKey;
     IF GS.mDisplay = qbTRUE THEN
     begin
@@ -771,7 +762,6 @@ begin
         GS.stat := QUIT;
     END; (*//select*)
   UNTIL (GS.stat <> HUMAN) AND (GS.stat <> FMOVE);
-
 END;
 
 FUNCTION ValidMove (Opponent : integer) : integer;
@@ -840,43 +830,16 @@ begin
       END;
     end; (*// col*)
   end; (*// row*)
-
 END;
 
-
-
-
-
-
-
-
-
-
-
-
-
-(*//ON ERROR GOTO BadMode
-(*
-//DO
-//  READ smode
-//  vmode = qbTRUE
-//  SCREEN smode
-//LOOP UNTIL vmode = qbTRUE
-
-//IF smode = 0 THEN
-//  CLS
-//  LOCATE 10, 15: PRINT "No graphics screen mode available; cannot run REVERSI.BAS"
-//ELSE
-  *)
-
 var
- key  : integer;
-gd,gm : integer;
+ key   : integer;
+ gd,gm : integer;
 begin
- gd:=VGA;
- gm:=VGAHi;
- smode:=9;
- initgraph(gd,gm,'C:\TP7\BGI');
+  gd:=VGA;
+  gm:=VGAHi;
+  smode:=9;
+  initgraph(gd,gm,'C:\TP7\BGI');
 
   GS.stat := START;
   GS.dLevel := 'Novice';
@@ -897,10 +860,6 @@ begin
       begin
         Repeat
           DisplayMsg('You have no valid moves.  Select pass.');
-          (*
-          Repeat
-            a := inkeystring;
-          UNTIL a <> #0 *)
           key:=getKey;
         UNTIL key = PASS;
         setfillstyle(solidfill,3);
