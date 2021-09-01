@@ -149,6 +149,7 @@ var
  count : integer;
 begin
   done := qbFALSE;
+  count:= 0;
   WHILE ((i <> IBound) OR (j <> JBound)) AND (done=qbFalse) do
   begin
     IF GG[i, j].player = GBoard THEN
@@ -261,6 +262,7 @@ var
  value : integer;
 begin
   BestMove := -99;
+  value:=0;
   FOR row := 1 TO 8 do
   begin
     FOR col := 1 TO 8 do
@@ -552,13 +554,11 @@ begin
   end
   ELSE IF Scorediff < 0 THEN
   begin
-    DisplayMsg('You lost by');
-    PRINT(IntToStr( ABS(Scorediff)),0,8);
+    DisplayMsg('You lost by '+IntToStr( ABS(Scorediff)));
   end
   ELSE
   begin
-    DisplayMsg('You won by');
-    PRINT(IntToStr(Scorediff),0,8);
+    DisplayMsg('You won by '+IntToStr(Scorediff));
   END;
 
   Repeat
