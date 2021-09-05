@@ -87,6 +87,7 @@ begin
  Str(i,tempstr);
  intToStr:=tempstr;
 end;
+
 procedure Locate(r,c : integer);
 begin
  Locate_row:=r;
@@ -246,9 +247,9 @@ begin
   END;
 
   LOCATE (17, 7);
-  PRINT('Your Score:      '+intToStr(GS.rScore),0,8);
+  PRINT('Your Score:      '+intToStr(GS.rScore)+' ',White,8);
   LOCATE(18, 7);
-  PRINT('Computer Score:  '+IntToStr(GS.bScore),0,8);
+  PRINT('Computer Score:  '+IntToStr(GS.bScore)+' ',White,8);
 END;
 
 
@@ -395,28 +396,28 @@ begin
   end;
 
   LOCATE(2, 35);
-  PRINT('R E V E R S I',0,8);
+  PRINT('R E V E R S I',White,8);
 
   LOCATE(5, 11);
-  PRINT('Game Controls',0,8);
+  PRINT('Game Controls',White,8);
   LOCATE(7, 7);
-  PRINT('S = Start New Game',0,8);
+  PRINT('S = Start New Game',White,8);
   LOCATE(8, 7);
-  PRINT('P = Pass Turn',0,8);
+  PRINT('P = Pass Turn',White,8);
   LOCATE(9, 7);
-  PRINT('D = Set Difficulty',0,8);
+  PRINT('D = Set Difficulty',White,8);
   LOCATE(10, 7);
-  PRINT('H = Display Help',0,8);
+  PRINT('H = Display Help',White,8);
   LOCATE(11, 7);
-  PRINT('Q = Quit',0,8);
+  PRINT('Q = Quit',White,8);
   LOCATE(15, 12);
-  PRINT('Game Status',0,8);
+  PRINT('Game Status',White,8);
   LOCATE(17, 7);
-  PRINT('Your Score:      '+IntToStr(GS.rScore)+'',0,8);
+  PRINT('Your Score:      '+IntToStr(GS.rScore)+' ',White,8);
   LOCATE(18, 7);
-  PRINT('Computer Score:  '+IntToStr(GS.bScore),0,8);
+  PRINT('Computer Score:  '+IntToStr(GS.bScore)+' ',White,8);
   LOCATE(20, 7);
-  PRINT('Difficulty:   '+GS.dLevel,0,8);
+  PRINT('Difficulty:   '+GS.dLevel,White,8);
 
   FOR row := 1 TO 8 do
   begin
@@ -501,14 +502,14 @@ begin
   Bar(50, 450,600, 460);
 
   LOCATE( 2, 35);
-  PRINT('REVERSI HELP',0,8);
+  PRINT('REVERSI HELP',White,8);
   FOR i := 1 TO 18 do
   begin
     LOCATE(3 + i, 7);
-    PRINT(a[i],0,8);
+    PRINT(a[i],White,8);
   end;
   LOCATE(23, 25);
-  PRINT('- Press any key to continue -',0,8);
+  PRINT('- Press any key to continue -',White,8);
   (*//SLEEP: a$ = INKEY$*)
   Repeat Until Keypressed;
   DrawGameBoard;
@@ -523,7 +524,7 @@ begin
   slen := Length(a);
   LX := (640 - 8 * (slen + 8)) div 2;
   SetColor(0);
-  Rectangle(LX - 1, 420,640 - LX, 447);
+  Rectangle(LX - 1, 420-5,640 - LX, 447-5);
   IF GBoard = 85 THEN
   begin
     (*//PAINT (LX + 10, 430), CHR$(85), 0*)
@@ -537,7 +538,7 @@ begin
     FloodFill(LX + 10, 430, 0);
   END;
   LOCATE(23, (80 - slen) div 2);
-  PRINT(a,0,8);
+  PRINT(a,White,8);
   GS.mDisplay := qbTRUE;
 END;
 
@@ -658,7 +659,7 @@ begin
     IF GS.mDisplay = qbTRUE THEN
     begin
       SetFillStyle(SolidFill,BG);
-      Bar(0, 420,640, 447);
+      Bar(0, 420-5,640, 447-5);
       GS.mDisplay := qbFALSE;
     END;
 
@@ -743,7 +744,7 @@ begin
           GS.dLevel := 'Novice';
         END;
         LOCATE(20, 7);
-        PRINT('Difficulty:   '+ GS.dLevel,0,8);
+        PRINT('Difficulty:   '+ GS.dLevel,White,8);
     end
     else if (move= ENTER) or (move =SPACE)  then
     begin
