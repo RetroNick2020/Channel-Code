@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="TDictionaryDemo1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="4" Y="18"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\..\..\..\lazarus-2.0.10-win64\fpc\3.2.0\source\packages\rtl-generics\src\generics.collections.pas"/>
+        <UnitName Value="Generics.Collections"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1606"/>
+        <CursorPos X="21" Y="1623"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

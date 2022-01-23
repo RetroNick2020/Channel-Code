@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "VGAMEM.C": "cpp"
+        "VGAMEM.C": "cpp",
+        "XCBITM32.C": "cpp",
+        "XMAKEVBM.C": "cpp",
+        "DEMO1.C": "cpp"
     }
 }

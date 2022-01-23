@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="E:\Development\lazarus-2.0.10-win64\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1357350767"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq &quot;-FiE:\Development\GitHub\Channel-Code\freepascal\Hash Demos\lib\x86_64-win64&quot; &quot;-FuE:\Development\GitHub\Channel-Code\freepascal\Hash Demos\&quot; &quot;-FUE:\Development\GitHub\Channel-Code\freepascal\Hash Demos\lib\x86_64-win64\&quot; &quot;-FEE:\Development\GitHub\Channel-Code\freepascal\Hash Demos\&quot; &quot;-oE:\Development\GitHub\Channel-Code\freepascal\Hash Demos\FPMapDemo1.exe&quot; FPMapDemo1.pas"/>
+</CONFIG>
