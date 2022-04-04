@@ -30,7 +30,7 @@ LOCATE 12,1
 PRINT "Press Enter to Set default Palette Using PaletteX commands"
 INPUT a$
 
-'Set Palette unsing PaletteX
+'Set Palette using PaletteX
 ' Power/Turbo BASIC Palette Commands,  Size= 48 Colors= 16 Format=6 Bit
 Call PaletteX (0, 0)
 Call PaletteX( 1, 2752512)
@@ -48,6 +48,7 @@ Call PaletteX(12, 1381695)
 Call PaletteX(13, 4134207)
 Call PaletteX(14, 1392447)
 Call PaletteX(15, 4144959)
+
 
 INPUT a$
 
@@ -73,7 +74,7 @@ DATA 63, 63, 63
 SUB PaletteX (ColorIndex%, ColorValue&)
   r%= 63 AND ColorValue&
   g%= (16128 AND ColorValue&) / 256
-  b% =(4128768 and ColorValue&) / 65535   'this line overflows in TurboBasic.Any ideas?
+  b% =(4128768 and ColorValue&) / 65536   'this line overflows in TurboBasic.Any ideas?
   Call SetVGAColor(ColorIndex%,r%,g%,b%)
 END SUB
 
