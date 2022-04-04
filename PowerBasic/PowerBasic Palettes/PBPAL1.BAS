@@ -74,9 +74,20 @@ DATA 63, 63, 63
 SUB PaletteX (ColorIndex%, ColorValue&)
   r%= 63 AND ColorValue&
   g%= (16128 AND ColorValue&) / 256
-  b% =(4128768 and ColorValue&) / 65536   'this line overflows in TurboBasic.Any ideas?
+  b% =(4128768 and ColorValue&) / 65536   'this line overflows in TurboBasic.Use Alternate below
   Call SetVGAColor(ColorIndex%,r%,g%,b%)
 END SUB
+
+'Alternative PaletteX for TurboBasic
+'SUB PaletteX (ColorIndex%, ColorValue&)
+' o%=VARPTR(ColorValue&)
+' s%=VARSEG(ColorValue&)
+' DEF SEG = s%
+' r%=PEEK(o%)
+' g%=PEEK(o%+1)
+' b%=PEEK(o%+2)
+' Call SetVGAColor(ColorIndex%,r%,g%,b%)
+'END SUB
 
 SUB SetVGAColor(ColorIndex%, r%, g%, b%)
 'Works in screen modes 7,8,9,12,13
