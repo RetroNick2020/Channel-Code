@@ -8,7 +8,7 @@
 170 '*  developed   :07/30/87                                    *
 180 '*  last Update :04/08/89'                                   *
 190 '*************************************************************
-200 '
+200 'eg. CALL IA(INTNR%,AH%,AL%,BH%,BL%,CH%,CL%,DH%,DL%,DI%,SI%,ES%,FLAGS%)
 210 CLS : KEY OFF
 220 PRINT"NOTE: This program can only be started if the GWBASIC was "
 230 PRINT"started from the DOS level with the command"
@@ -35,7 +35,7 @@
 60030 '* Input: none                                               *
 60040 '* Output: IA is the Start address of the Interrupt routine  *
 60050 '*************************************************************
-60060 '
+60060 'eg. CALL IA(INTNR%,AH%,AL%,BH%,BL%,CH%,CL%,DH%,DL%,DI%,SI%,ES%,FLAGS%)
 60070 IA=60000! 'Start address of the routine in the BASIC segment
 60080 DEF SEG 'set BASIC segment
 60090 RESTORE 60130
