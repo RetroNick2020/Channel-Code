@@ -15,7 +15,7 @@
 90 LINE(0,345)-(639,479),1,BF
 100 FOR C%=0 to 15
 110   READ R%,G%,B%
-120   'SETRGB=VARPTR(RCODE%(0)):CALL SETRGB(C%,R%,G%,B%)
+120   SETRGB=VARPTR(RCODE%(0)):CALL SETRGB(C%,R%,G%,B%)
 121   'OUT &H3C8, C%   ' Point to color
 122   'OUT &H3C9, R%   ' Send RGB values
 123   'OUT &H3C9, G%   ' using out's to set color values works in screen 13
@@ -45,6 +45,4 @@
 3030   'LOCATE 21,1: PRINT I;"    ";
 3040 NEXT 
 3040 RETURN
-
-
 
