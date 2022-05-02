@@ -1,4 +1,7 @@
-'create MYFUNC.LIB
+'compile nasm -f obj myfunc.asm myfunc.obj
+'to create MYFUNC.OBJ
+'
+'To create MYFUNC.LIB
 'C:\QB45\LIB
 'will tell you it does not exist and prompt to create - answer y
 'At Operations: line enter MYFUNC.OBJ
