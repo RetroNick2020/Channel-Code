@@ -1,0 +1,64 @@
+object Form1: TForm1
+  Left = -1325
+  Height = 560
+  Top = 320
+  Width = 1006
+  Caption = 'Form1'
+  ClientHeight = 560
+  ClientWidth = 1006
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object ScrollBar1: TScrollBar
+    Left = 134
+    Height = 26
+    Top = 83
+    Width = 266
+    PageSize = 0
+    TabOrder = 0
+    OnChange = ScrollBar1Change
+  end
+  object Label1: TLabel
+    Left = 496
+    Height = 20
+    Top = 83
+    Width = 44
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object ScrollBox1: TScrollBox
+    Left = 92
+    Height = 332
+    Top = 168
+    Width = 642
+    HorzScrollBar.Page = 617
+    HorzScrollBar.Tracking = True
+    VertScrollBar.Page = 307
+    VertScrollBar.Tracking = True
+    ClientHeight = 307
+    ClientWidth = 617
+    TabOrder = 1
+    object Image1: TImage
+      Left = 330
+      Height = 176
+      Top = 184
+      Width = 358
+    end
+  end
+  object Label2: TLabel
+    Left = 760
+    Height = 20
+    Top = 80
+    Width = 44
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 872
+    Height = 20
+    Top = 80
+    Width = 44
+    Caption = 'Label3'
+    ParentColor = False
+  end
+end
