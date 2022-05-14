@@ -614,15 +614,6 @@ begin
   ConsoleWidth := AWidth;
   ConsoleHeight := AHeight;
 
-
-  (*
-  if (AWidth = 640) and (AHeight = 350) then
-  begin
-    ConsoleWidth := 1382;
-    ConsoleHeight := 754;
-  end;
-    *)
-
   if Double320x200 and (AWidth = 320) and (AHeight = 200) then
   begin
     ConsoleWidth := 640;
