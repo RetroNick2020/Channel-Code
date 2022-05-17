@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="E:\Development\lazarus-2.0.10-win64\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1357352815"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -FiE:\Development\GitHub\Channel-Code\lazarus\TScrollBox_OnChange\lib\x86_64-win64 -FuE:\Development\lazarus-2.0.10-win64\lcl\units\x86_64-win64\win32 -FuE:\Development\lazarus-2.0.10-win64\lcl\units\x86_64-win64 -FuE:\Development\lazarus-2.0.10-win64\components\lazutils\lib\x86_64-win64 -FuE:\Development\lazarus-2.0.10-win64\packager\units\x86_64-win64 -FuE:\Development\GitHub\Channel-Code\lazarus\TScrollBox_OnChange\ -FUE:\Development\GitHub\Channel-Code\lazarus\TScrollBox_OnChange\lib\x86_64-win64\ -FEE:\Development\GitHub\Channel-Code\lazarus\TScrollBox_OnChange\ -oE:\Development\GitHub\Channel-Code\lazarus\TScrollBox_OnChange\project1.exe -dLCL -dLCLwin32 project1.lpr"/>
+</CONFIG>

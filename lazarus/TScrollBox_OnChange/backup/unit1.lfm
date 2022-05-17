@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = -1709
+  Height = 778
+  Top = 157
+  Width = 1325
+  Caption = 'Form1'
+  ClientHeight = 778
+  ClientWidth = 1325
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object ScrollBar1: TScrollBar
+    Left = 952
+    Height = 26
+    Top = 24
+    Width = 266
+    PageSize = 0
+    TabOrder = 0
+    OnChange = ScrollBar1Change
+  end
+  object Label1: TLabel
+    Left = 1112
+    Height = 20
+    Top = 128
+    Width = 44
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object ScrollBox1: TScrollBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 778
+    Top = 0
+    Width = 820
+    HorzScrollBar.Page = 1
+    HorzScrollBar.Position = 1
+    HorzScrollBar.Range = 999
+    HorzScrollBar.Tracking = True
+    VertScrollBar.Page = 1
+    VertScrollBar.Position = 1
+    VertScrollBar.Range = 999
+    VertScrollBar.Tracking = True
+    Anchors = [akTop, akLeft, akBottom]
+    AutoScroll = False
+    TabOrder = 1
+    OnMouseMove = ScrollBox1MouseMove
+    OnMouseWheelDown = ScrollBox1MouseWheelDown
+    OnMouseWheelUp = ScrollBox1MouseWheelUp
+    OnPaint = ScrollBox1Paint
+  end
+  object Label2: TLabel
+    Left = 1032
+    Height = 20
+    Top = 80
+    Width = 44
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 872
+    Height = 20
+    Top = 80
+    Width = 44
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 840
+    Height = 20
+    Top = 195
+    Width = 44
+    Caption = 'Label4'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 876
+    Height = 20
+    Top = 275
+    Width = 44
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object Image1: TImage
+    Left = 848
+    Height = 176
+    Top = 464
+    Width = 152
+    OnMouseDown = Image1MouseDown
+    OnMouseMove = Image1MouseMove
+    OnMouseUp = Image1MouseUp
+  end
+end
