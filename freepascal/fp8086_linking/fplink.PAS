@@ -1,4 +1,5 @@
 (* ************************************************************ *)
+(* YouTube video https://youtu.be/-HzhSGruX3U                   *)
 (* fplink.pas putimage link to exe demo For freepascal 8086     *)
 (*                                                              *)
 (* FPIMG.XGF was created by Exporting image as putimage file    *)
