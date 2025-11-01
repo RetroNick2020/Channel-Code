@@ -11,7 +11,8 @@ Screen _NewImage(800, 600, 32)
 LoadBMFont fntFile$, pngFile$
 Line (0, 0)-(100, 100), _RGB32(255, 0, 0), BF
 
-PrintBMF 20, 20, "Hello from QB64-PE BMFont!", _RGB32(255, 255, 0)
+PrintBMF 20, 20, "Hello from QB64-PE BMFont! ", _RGB32(255, 255, 0)
+'PrintBMFGlyph 140, 40, Chr$(0) + Chr$(1), 1
 
 Print "Press any key to quit"
 Sleep
@@ -111,5 +112,17 @@ Sub PrintBMF (x%, y%, txt$, col&)
     Next
 End Sub
 
+Sub PrintBMFGlyph (x%, y%, txt$, scale!)
+    cx% = x%
+    For i% = 1 To Len(txt$)
+        c% = Asc(Mid$(txt$, i%, 1))
+    _PUTIMAGE (cx% + fontChar(c%).xo * scale!, y% + fontChar(c%).yo * scale!)- _
+              (cx%+ (fontChar(c%).xo + fontChar(c%).w) * scale! - 1, _
+               y% + (fontChar(c%).yo + fontChar(c%).h) * scale! - 1), fontTex&, , _
+              (fontChar(c%).x, fontChar(c%).y)- _
+              (fontChar(c%).x + fontChar(c%).w - 1, fontChar(c%).y + fontChar(c%).h - 1)
+        cx% = cx% + fontChar(c%).xadv * scale!
+    Next
+End Sub
 
 
